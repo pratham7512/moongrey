@@ -217,7 +217,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "2",
-    src: "https://images.unsplash.com/photo-1476514525535-07fb3b4eae5f?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     alt: "Calm lake surrounded by mountains",
     location: "Lake Louise, Canada",
   },
@@ -257,7 +257,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     category: "Philosophy",
     image:
-      "https://images.unsplash.com/photo-1476514525535-07fb3b4eae5f?w=800&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
   },
   {
     id: "packing-light",

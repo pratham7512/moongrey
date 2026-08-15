@@ -31,7 +31,6 @@ export function Hero() {
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/65" />
       <Container as="div" className="relative flex min-h-svh flex-col justify-end pb-12 pt-36 md:pb-16">
-        <p className="animate-[rise_800ms_ease-out_both] text-xs font-semibold tracking-[0.22em] text-white/80 uppercase">Travel, thoughtfully made</p>
         <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.065em] text-balance md:text-7xl lg:text-[6.5rem] lg:leading-[0.94]">Leave room for wonder.</h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">{siteConfig.description}</p>
         <div className="mt-8 flex flex-wrap gap-3">
