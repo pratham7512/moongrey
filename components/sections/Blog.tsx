@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { TravelImage } from "@/components/ui/TravelImage";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -14,7 +14,7 @@ export function Blog() {
       <Container as="div">
         <SectionHeading
           eyebrow="Blog"
-          title="Notes from Moon Grey"
+          title="Notes from moongrey"
           description="Travel tips, destination guides, and reflections on moving through the world with intention."
         />
 
@@ -25,7 +25,7 @@ export function Blog() {
               className="group flex flex-col overflow-hidden rounded-2xl bg-card ring-1 ring-border/60 transition-shadow hover:shadow-md"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
-                <Image
+                <TravelImage
                   src={post.image}
                   alt={post.title}
                   fill

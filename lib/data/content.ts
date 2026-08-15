@@ -93,7 +93,7 @@ export const destinations: Destination[] = [
     description:
       "Warm spice markets, riad courtyards, and desert excursions under open skies.",
     image:
-      "https://images.unsplash.com/photo-1517824809024-5797a0227856?w=800&q=80",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=85",
     tag: "Heritage",
   },
 ];
@@ -184,7 +184,7 @@ export const testimonials: Testimonial[] = [
     name: "Elena Morris",
     location: "Seattle, USA",
     quote:
-      "Moon Grey understood that we wanted space — not a packed schedule. Kyoto felt unhurried and deeply personal.",
+      "moongrey understood that we wanted space — not a packed schedule. Kyoto felt unhurried and deeply personal.",
     rating: 5,
     trip: "Japan Serenity",
   },
@@ -357,7 +357,7 @@ export const termsSections: LegalSection[] = [
   {
     title: "Services",
     paragraphs: [
-      "Moon Grey acts as a travel planning and booking agent. We coordinate itineraries, accommodations, and experiences with third-party suppliers on your behalf.",
+      "moongrey acts as a travel planning and booking agent. We coordinate itineraries, accommodations, and experiences with third-party suppliers on your behalf.",
       "Final travel documents, schedules, and supplier terms will be provided before departure.",
     ],
   },
@@ -378,7 +378,7 @@ export const termsSections: LegalSection[] = [
   {
     title: "Liability",
     paragraphs: [
-      "Moon Grey is not liable for acts, errors, or omissions of third-party suppliers including airlines, hotels, and tour operators.",
+      "moongrey is not liable for acts, errors, or omissions of third-party suppliers including airlines, hotels, and tour operators.",
       "Travel involves inherent risks. You are responsible for ensuring you meet health, visa, and documentation requirements for your destination.",
     ],
   },

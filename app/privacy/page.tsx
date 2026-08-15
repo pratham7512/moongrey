@@ -5,7 +5,7 @@ import { privacySections } from "@/lib/data/content";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Moon Grey collects, uses, and protects your personal information.",
+  description: "How moongrey collects, uses, and protects your personal information.",
 };
 
 export default function PrivacyPage() {

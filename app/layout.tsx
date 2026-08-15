@@ -19,11 +19,11 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: {
-    default: "Moon Grey | Tours & Travel",
-    template: "%s | Moon Grey",
+    default: "moongrey | Thoughtful Travel",
+    template: "%s | moongrey",
   },
   description:
-    "Moon Grey crafts thoughtful journeys with calm planning, curated stays, and space to truly arrive.",
+    "moongrey crafts thoughtful journeys with calm planning, curated stays, and space to truly arrive.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,50 +1,58 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Check } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/layout/SectionHeading";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { packages } from "@/lib/data/content";
+import { getPackages } from "@/lib/data/catalog";
 import { cn } from "@/lib/utils";
+import { TravelImage } from "@/components/ui/TravelImage";
 
-export function Packages() {
+type PackagesProps = {
+  limit?: number;
+  showViewAll?: boolean;
+};
+
+export async function Packages({ limit, showViewAll = false }: PackagesProps) {
+  const allPackages = await getPackages();
+  const displayedPackages = limit ? allPackages.slice(0, limit) : allPackages;
+
   return (
     <Section id="packages">
       <Container as="div">
         <SectionHeading
-          eyebrow="Packages"
-          title="Ready-made journeys, open to refinement"
-          description="Each package is a starting point — we adapt timing, stays, and activities to match how you travel."
+          eyebrow="Your journey"
+          title="Thoughtfully designed packages"
+          description="Choose a curated package and make it your own. Each journey is a starting point — we adapt every detail to match how you want to travel."
         />
 
-        <div className="grid gap-8 lg:grid-cols-3">
-          {packages.map((pkg) => (
+        <div className="grid gap-6 lg:grid-cols-3">
+          {displayedPackages.map((pkg) => (
             <article
               key={pkg.id}
               className={cn(
-                "flex flex-col overflow-hidden rounded-3xl bg-card ring-1 ring-border/60",
-                pkg.featured && "lg:-mt-2 lg:mb-2 lg:ring-2 lg:ring-primary/20"
+                "group flex flex-col overflow-hidden rounded-[1.75rem] bg-card ring-1 ring-black/8 transition duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/10",
+                pkg.featured && "lg:-mt-3 lg:mb-3"
               )}
             >
               <div className="relative aspect-[4/3]">
-                <Image
+                <TravelImage
                   src={pkg.image}
                   alt={pkg.name}
                   fill
-                  className="object-cover"
+                  className="object-cover transition duration-700 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 33vw"
                 />
                 {pkg.featured && (
-                  <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
+                  <Badge className="absolute top-4 left-4 bg-[#1d1d1f] text-white">
                     Popular
                   </Badge>
                 )}
               </div>
 
-              <div className="flex flex-1 flex-col p-7">
+              <div className="flex flex-1 flex-col p-7 md:p-8">
                 <div className="mb-4 flex items-center justify-between gap-2">
                   <h3 className="font-heading text-xl font-semibold">{pkg.name}</h3>
                   <span className="text-sm text-muted-foreground">{pkg.duration}</span>
@@ -72,15 +80,25 @@ export function Packages() {
                   </p>
                   <Link
                     href="#contact"
-                    className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+                    className={cn(buttonVariants({ size: "sm" }), "bg-[#1d1d1f] text-white hover:bg-black")}
                   >
-                    Inquire
+                    Book <ArrowUpRight className="size-3.5" />
                   </Link>
                 </div>
               </div>
             </article>
           ))}
         </div>
+        {showViewAll && (
+          <div className="mt-10 text-center">
+            <Link
+              href="/packages"
+              className={cn(buttonVariants({ size: "lg" }), "rounded-full bg-[#0071e3] px-6 text-white hover:bg-[#0077ed]")}
+            >
+              View all packages <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
+        )}
       </Container>
     </Section>
   );

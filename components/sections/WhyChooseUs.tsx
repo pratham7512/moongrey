@@ -10,7 +10,7 @@ export function WhyChooseUs() {
       <Container as="div">
         <SectionHeading
           eyebrow="Why choose us"
-          title="The Moon Grey difference"
+          title="The moongrey difference"
           description="We travel the way we'd want to be traveled with — attentive, honest, and always respectful of your time."
         />
 

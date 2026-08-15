@@ -11,10 +11,11 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/lib/data/site";
 
+function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+}
+
 export function Contact() {
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-  }
 
   return (
     <Section id="contact">

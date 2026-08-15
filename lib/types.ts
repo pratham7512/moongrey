@@ -73,3 +73,10 @@ export type LegalSection = {
   title: string;
   paragraphs: string[];
 };
+
+export type CommunityLink = {
+  id: string;
+  label: string;
+  url: string;
+  type: "whatsapp" | "telegram" | "facebook" | "email";
+};
